@@ -31,4 +31,4 @@ db.sqlite3
 ```
 
 ## Demo
-![image](https://user-images.githubusercontent.com/72757567/168465987-0efe1db8-2870-415d-a6a8-1673b01f23cd.png)
+![image](https://user-images.githubusercontent.com/72757567/168466699-001f3554-c9a8-4fdd-a1dc-5f1829cfa095.png)
