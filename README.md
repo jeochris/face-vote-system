@@ -15,7 +15,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 2. Go to `127.0.0.1:8000/`
-3. Starting from front, start voting each pair
+3. Starting from front, start voting each pair (1~5) : higher score if you think similar
 4. Vote result saved in db.sqlite3.vote_app_personalanswer
 5. Convert it to csv file if needed
 
@@ -28,3 +28,6 @@ vote_app/migrations/__pycache__
 vote_app/migrations/0001_initial.py
 db.sqlite3
 ```
+
+## Demo
+![image](https://user-images.githubusercontent.com/72757567/168465987-0efe1db8-2870-415d-a6a8-1673b01f23cd.png)
