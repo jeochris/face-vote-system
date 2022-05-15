@@ -42,4 +42,7 @@ db.sqlite3
 ```
 
 ## Demo
-![image](https://user-images.githubusercontent.com/72757567/168466699-001f3554-c9a8-4fdd-a1dc-5f1829cfa095.png)
+<img src = "https://user-images.githubusercontent.com/72757567/168466699-001f3554-c9a8-4fdd-a1dc-5f1829cfa095.png" width="70%" height="70%">
+
+![KakaoTalk_20220515_174452909](https://user-images.githubusercontent.com/72757567/168467318-344826ba-183a-4c11-8c94-e54499cfa731.png)
+
