@@ -4,9 +4,8 @@
 ```
 pip install django
 ```
-Insert two Front facial images to compare in each folder: `static/front/comp{i}/`
-
-Left and Right as well
+1. Insert two Front facial images to compare in each folder: `static/front/comp{i}/`
+2. Left and Right as well
 
 ## How to run
 1. Migrate and run server
