@@ -1,0 +1,21 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Left</title>
+</head>
+<body>
+    <h1> Left - {{ cur_page }}</h1>
+    {% for vote in votelist %}
+        <img src="{% get_static_prefix %}left/comp{{ cur_page }}/{{ vote }}" width="40%" height="40%">
+    {% endfor %}
+    <form action="/left/{{ cur_page }}", method="post">
+        <button type="submit" name="score" value="1">1</button>
+        <button type="submit" name="score" value="2">2</button>
+        <button type="submit" name="score" value="3">3</button>
+        <button type="submit" name="score" value="4">4</button>
+        <button type="submit" name="score" value="5">5</button>
+    </form>
+</body>
+</html>

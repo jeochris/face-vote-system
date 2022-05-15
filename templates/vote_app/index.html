@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start</title>
+</head>
+<body>
+    <h1>Vote System</h1>
+    <ol>
+        {% for each in watchlist %}
+            <li><a href="/{{ each.direction }}/1">{{each.direction}}</a></li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
