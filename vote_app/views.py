@@ -11,9 +11,9 @@ page = {
     ]
 }
 
-FRONT_IMG = 2
-LEFT_IMG = 2
-RIGHT_IMG = 2
+FRONT_IMG = 2000
+LEFT_IMG = 800
+RIGHT_IMG = 800
 
 def index(request):
     global page
