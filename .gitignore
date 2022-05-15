@@ -5,8 +5,8 @@
 *.log
 *.pot
 *.pyc
-*.jpg
-*.png
+static/*/*/*.jpg
+static/*/*/*.png
 __pycache__/
 local_settings.py
 db.sqlite3
