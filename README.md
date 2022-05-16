@@ -10,21 +10,24 @@ pip install django
 4. Use your own `secrets.json` (secret key)
 
 ## How to run
-1. Migrate and run server
+1. Migrate only when you first start this program
 ```
 python manage.py makemigrations
 python manage.py migrate
+```
+2. Run server
+```
 python manage.py runserver
 ```
-2. Go to `127.0.0.1:8000/`
-3. Starting from front, start voting each pair (1~5) : higher score if you think similar
-4. Vote result saved in db.sqlite3.vote_app_personalanswer
-5. Convert it to csv file if needed
+3. Go to `127.0.0.1:8000/`
+4. Start voting each pair (1~5) : higher score if you think similar
+5. You can continue voting where you stopped even if you reopened the server, but please go to `127.0.0.1:8000/` when you continue
+6. Vote result saved in db.sqlite3.vote_app_personalanswer
+7. Convert it to csv file if needed
 
 ## Caution
-1. Please vote with order front -> left -> right
-2. Once voting started, I recommend to not stop voting
-3. If you want to restart voting anyway, turn off server and delete files/folders below
+1. You cannot modify your voting score after you vote
+2. If you want to delete all your voting score, turn off server and delete files/folders below
 ```
 vote_app/migrations/__pycache__
 vote_app/migrations/0001_initial.py
