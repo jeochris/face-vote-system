@@ -21,9 +21,9 @@ python manage.py runserver
 ```
 3. Go to `127.0.0.1:8000/`
 4. Start voting each pair (1~5) : higher score if you think similar
-5. You can continue voting where you stopped even if you reopened the server, but please go to `127.0.0.1:8000/` when you continue
+5. You can continue voting on where you stopped even if you reopen the server, but should go to `127.0.0.1:8000/` when you continue regarding any possible error
 6. Vote result saved in db.sqlite3.vote_app_personalanswer
-7. Convert it to csv file if needed
+7. Convert to csv file if needed
 
 ## Caution
 1. You cannot modify your voting score after you vote
