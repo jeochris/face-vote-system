@@ -9,7 +9,7 @@
 *.png
 *.csv
 __pycache__/
-settings.py
+secrets.json
 db.sqlite3
 db.sqlite3-journal
 media
