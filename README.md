@@ -7,17 +7,7 @@ pip install django
 1. Insert two Front facial images to compare in each folder: `static/front/comp{i}/`
 2. Left and Right as well
 3. Let appropriate number on `FRONT_IMG LEFT_IMG RIGHT_IMG` in `vote_app/views.py` (number of pairs to compare)
-4. Use your own `settings.py` (secret key)
-```
-INSTALLED_APPS -> vote_app
-
-TEMLATES - DIRS -> [ BASE_DIR / 'templates' ]
-
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
-```
+4. Use your own `secrets.json` (secret key)
 
 ## How to run
 1. Migrate and run server
