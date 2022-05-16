@@ -3,25 +3,23 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import PersonalAnswer
 import glob
 
-page = {
-    'watchlist': [
-        {'direction': 'front'},
-        {'direction': 'left'},
-        {'direction': 'right'}
-    ]
-}
-
 FRONT_IMG = 2000
 LEFT_IMG = 800
 RIGHT_IMG = 800
 
 def index(request):
-    global page
-    return render(request, 'vote_app/index.html', page)
+    cur_vote_count = len(PersonalAnswer.objects.all())
+    if cur_vote_count < FRONT_IMG:
+        return redirect(f'/front/{cur_vote_count+1}')
+    elif cur_vote_count < FRONT_IMG + LEFT_IMG:
+        return redirect(f'/left/{cur_vote_count+1-FRONT_IMG}')
+    elif cur_vote_count < FRONT_IMG + LEFT_IMG + RIGHT_IMG:
+        return redirect(f'/right/{cur_vote_count+1-FRONT_IMG-LEFT_IMG}')
+    else:
+        return HttpResponse('<h1>Vote Finish!</h1>')
 
 @csrf_exempt
 def front(request, id):
-    global page
 
     if request.method == 'GET':
         imgs_path_list = glob.glob(f'static/front/comp{id}/*')
@@ -40,12 +38,10 @@ def front(request, id):
         if nextId <= FRONT_IMG:
             return redirect(f'/front/{nextId}')
         else:
-            del page['watchlist'][0]
             return redirect('/')
 
 @csrf_exempt
 def left(request, id):
-    global page
 
     if request.method == 'GET':
         imgs_path_list = glob.glob(f'static/left/comp{id}/*')
@@ -64,12 +60,10 @@ def left(request, id):
         if nextId <= LEFT_IMG:
             return redirect(f'/left/{nextId}')
         else:
-            del page['watchlist'][0]
             return redirect('/')
 
 @csrf_exempt
 def right(request, id):
-    global page
 
     if request.method == 'GET':
         imgs_path_list = glob.glob(f'static/right/comp{id}/*')
@@ -88,5 +82,4 @@ def right(request, id):
         if nextId <= RIGHT_IMG:
             return redirect(f'/right/{nextId}')
         else:
-            del page['watchlist'][0]
             return redirect('/')
