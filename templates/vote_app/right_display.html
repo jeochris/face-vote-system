@@ -9,7 +9,7 @@
 <body>
     <h1> Right - {{ cur_page }}</h1>
     {% for vote in votelist %}
-        <img src="{% get_static_prefix %}right/comp{{ cur_page }}/{{ vote }}" width="25%" height="25%">
+        <img src="{% get_static_prefix %}{{ vote }}" width="25%" height="25%">
     {% endfor %}
     <form action="/right/{{ cur_page }}", method="post">
         <button type="submit" name="score" value="1">1</button>

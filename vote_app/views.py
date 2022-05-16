@@ -25,7 +25,7 @@ def front(request, id):
         imgs_path_list = glob.glob(f'static/front/comp{id}/*')
         real_imgs_path_list = []
         for img_path in imgs_path_list:
-            real_imgs_path_list.append(img_path.split('\\')[-1])
+            real_imgs_path_list.append("/".join(img_path.split('/')[1:]))
 
         context = {'cur_page': id, 'votelist': real_imgs_path_list}
         return render(request, 'vote_app/front_display.html', context)
@@ -47,7 +47,7 @@ def left(request, id):
         imgs_path_list = glob.glob(f'static/left/comp{id}/*')
         real_imgs_path_list = []
         for img_path in imgs_path_list:
-            real_imgs_path_list.append(img_path.split('\\')[-1])
+            real_imgs_path_list.append("/".join(img_path.split('/')[1:]))
 
         context = {'cur_page': id, 'votelist': real_imgs_path_list}
         return render(request, 'vote_app/left_display.html', context)
@@ -69,7 +69,7 @@ def right(request, id):
         imgs_path_list = glob.glob(f'static/right/comp{id}/*')
         real_imgs_path_list = []
         for img_path in imgs_path_list:
-            real_imgs_path_list.append(img_path.split('\\')[-1])
+            real_imgs_path_list.append("/".join(img_path.split('/')[1:]))
 
         context = {'cur_page': id, 'votelist': real_imgs_path_list}
         return render(request, 'vote_app/right_display.html', context)
