@@ -27,7 +27,8 @@ python manage.py runserver
 
 ## Caution
 1. You cannot modify your voting score after you vote
-2. If you want to delete all your voting score, turn off server and delete files/folders below
+2. Go to `127.0.0.1:8000/` whenever you restart voting
+3. If you want to delete all your votings, turn off server and delete files/folders below
 ```
 vote_app/migrations/__pycache__
 vote_app/migrations/0001_initial.py
